@@ -1,35 +1,25 @@
 
 //Create a variable called computerChoice and set it equal to random of the three variables below
-
-
 let computerChoice = Math.floor(Math.random()*3+1);
-let rock= 1;
-let paper= 2;
-let scissors=3;
-
 console.log (computerChoice);
-
+//Create a function that takes the random number and changes the value to a string
 function getComputerChoice(){
     if (computerChoice===1){
-        computerChoice= "Rock"
+        computerChoice= "rock"
     } else if (computerChoice===2){
-        computerChoice= "Paper"
+        computerChoice= "paper"
     } else if (computerChoice===3){
-        computerChoice= "Scissors"
+        computerChoice= "scissors"
 }
 }
 getComputerChoice();
 console.log(computerChoice);
-//Create a variable called Rock and set it equal to "rock"
-//Create a variable called Paper and set it equal to "paper"
-//Create a variable called Scissors and set it equal to "scissors"
-//Create a function getComputerChoice that randomly selects between these three options
+//Create a variable called playerChoice and ask the user for a value
+let playerInput= window.prompt("Choose Rock, Paper, or Scissors.")
+//Create a function that takes the data from the user and turn into "Rock"
+    let playerChoice= playerInput.toLowerCase()
+    console.log (playerChoice);
 
-//Create a variable called playerChoice and and set it equal to random of the three variables below
-//Create a variable called Rock and set it equal to "rock"
-//Create a variable called Paper and set it equal to "paper"
-//Create a variable called Scissors and set it equal to "scissors"
-//Create a function that randomly selects between these three options and call it getPlayerChoice
 
 //Create a function that grabs computerChoice and compares it to playerChoice
 
