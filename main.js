@@ -1,21 +1,25 @@
 
 //Create a variable called computerChoice and set it equal to random of the three variables below
-//let computerChoice =  
+
+
+let computerChoice = Math.floor(Math.random()*3+1);
+let rock= 1;
+let paper= 2;
+let scissors=3;
+
+console.log (computerChoice);
+
 function getComputerChoice(){
-    var computerChoice = Math.floor(Math.random()*3+1)
-    console.log (computerChoice)
-    
+    if (computerChoice===1){
+        computerChoice= "Rock"
+    } else if (computerChoice===2){
+        computerChoice= "Paper"
+    } else if (computerChoice===3){
+        computerChoice= "Scissors"
+}
 }
 getComputerChoice();
-
-if (getComputerChoice() ===1) {
-    let computerChoice = "Rock"
-} else if (getComputerChoice() ===2) {
-    let computerChoice = "Paper"
-}  else if (getComputerChoice() ===3) {
-    let computerChoice = "Scissors"
-}
-console.log (computerChoice);
+console.log(computerChoice);
 //Create a variable called Rock and set it equal to "rock"
 //Create a variable called Paper and set it equal to "paper"
 //Create a variable called Scissors and set it equal to "scissors"
