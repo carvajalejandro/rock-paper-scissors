@@ -1,9 +1,17 @@
-console.log("hello world")
+
 //Create a variable called computerChoice and set it equal to random of the three variables below
+//let computerChoice =  
+function computerChoice(){
+    var randomnumber = Math.floor(Math.random()*3+1)
+    return randomnumber
+}
+
+console.log(computerChoice());
+
 //Create a variable called Rock and set it equal to "rock"
 //Create a variable called Paper and set it equal to "paper"
 //Create a variable called Scissors and set it equal to "scissors"
-//Create a function that randomly selects between these three options and call it getComputerChoice
+//Create a function getComputerChoice that randomly selects between these three options
 
 //Create a variable called playerChoice and and set it equal to random of the three variables below
 //Create a variable called Rock and set it equal to "rock"
