@@ -16,21 +16,38 @@ getComputerChoice();
 console.log(computerChoice);
 //Create a variable called playerChoice and ask the user for a value
 let playerInput= window.prompt("Choose Rock, Paper, or Scissors.")
-//Create a function that takes the data from the user and turn into "Rock"
-    let playerChoice= playerInput.toLowerCase()
-    console.log (playerChoice);
-
-
+//Create a variable that takes the data from the user and turn into all lower case string
+let playerChoice= playerInput.toLowerCase()
+console.log (playerChoice);
+let result;
 //Create a function that grabs computerChoice and compares it to playerChoice
+function playRound(){
+if (computerChoice==="rock" && playerChoice==="rock"){
+    result= "It is a tie";
+} else if (computerChoice==="rock" && playerChoice==="paper"){
+    result="You win";
+} else if (computerChoice==="rock" && playerChoice==="scissors"){
+    result="You lose";
+} else if (computerChoice==="paper" && playerChoice==="paper"){
+    result= "It is a tie";
+} else if (computerChoice==="paper" && playerChoice==="scissors"){
+    result="You win";
+} else if (computerChoice==="paper" && playerChoice==="rock"){
+    result="You lose";
+} else if (computerChoice==="scissors" && playerChoice==="scissors"){
+    result= "It is a tie";
+} else if (computerChoice==="scissors" && playerChoice==="rock"){
+    result="You win";
+} else if (computerChoice==="scissors" && playerChoice==="paper"){
+    result="You lose";
+} else {
+    result="Please choose between Rock, Paper, and Scissors"
+}
+}
 
-//If computerChoice equals rock && playerChoice equals rock, then display "It is a tie"
-//If computerChoice equals rock && playerChoice equals paper, then display "You win this round"
-//If computerChoice equals rock && playerChoice equals scissors, then display "You lose this round"
+playRound();
+console.log(result);
+alert(result);
 
-//If computerChoice equals paper && playerChoice equals paper, then display "It is a tie"
-//If computerChoice equals paper && playerChoice equals scissors, then display "You win this round"
-//If computerChoice equals paper && playerChoice equals rock, then display "You lose this round"
 
-//If computerChoice equals scissors && playerChoice equals scissors, then display "It is a tie"
-//If computerChoice equals scissors && playerChoice equals rock, then display "You win this round"
-//If computerChoice equals scissors && playerChoice equals paper, then display "You lose this round"
+
