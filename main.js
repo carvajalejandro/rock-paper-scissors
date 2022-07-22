@@ -1,3 +1,7 @@
+//Create a function called game that makes playRound occur
+//Create a loop that increases that increase the value of i every time that result displays via alert
+
+
 
 //Create a variable called computerChoice and set it equal to random of the three variables below
 let computerChoice = Math.floor(Math.random()*3+1);
@@ -44,8 +48,10 @@ if (computerChoice==="rock" && playerChoice==="rock"){
     result="Please choose between Rock, Paper, and Scissors"
 }
 }
-
-playRound();
+function game(){
+    playRound();
+}
+game();
 console.log(result);
 alert(result);
 
