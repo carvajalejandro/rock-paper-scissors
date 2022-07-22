@@ -1,4 +1,4 @@
-//Create a function called game that makes playRound occur
+
 //Create a loop that increases that increase the value of i every time that result displays via alert
 
 
@@ -48,12 +48,16 @@ if (computerChoice==="rock" && playerChoice==="rock"){
     result="Please choose between Rock, Paper, and Scissors"
 }
 }
+//Create a function called game that makes playRound occur
 function game(){
     playRound();
 }
-game();
+for (i=0; i<=5;) {
+    if (alert(result)){
+        i++;
+        ame();
 console.log(result);
 alert(result);
-
-
+    }
+}
 
