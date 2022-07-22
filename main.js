@@ -1,4 +1,7 @@
-
+//Create variables for winning losing and ties
+let win=0
+let loss=0
+let tie=0
 //Create a loop that increases that increase the value of i every time that result displays via alert
 for (let i = 0; i < 5; i++) {
 //Create a variable called computerChoice and set it equal to random of the three variables below
@@ -23,37 +26,38 @@ let result;
 //Create a function that grabs computerChoice and compares it to playerChoice
 function playRound(){
 if (computerChoice==="rock" && playerChoice==="rock"){
-    result= "It is a tie";
+    result= "It is a tie"; 
+    tie ++;
 } else if (computerChoice==="rock" && playerChoice==="paper"){
     result="You win";
+    win++;
 } else if (computerChoice==="rock" && playerChoice==="scissors"){
     result="You lose";
+    loss++;
 } else if (computerChoice==="paper" && playerChoice==="paper"){
     result= "It is a tie";
+    tie++;
 } else if (computerChoice==="paper" && playerChoice==="scissors"){
     result="You win";
+    win++;
 } else if (computerChoice==="paper" && playerChoice==="rock"){
     result="You lose";
+    loss++;
 } else if (computerChoice==="scissors" && playerChoice==="scissors"){
     result= "It is a tie";
+    tie++;
 } else if (computerChoice==="scissors" && playerChoice==="rock"){
     result="You win";
+    win++;
 } else if (computerChoice==="scissors" && playerChoice==="paper"){
     result="You lose";
+    loss++;
 } else {
     result="Please choose between Rock, Paper, and Scissors"
 }
 }
-//Create variables for winning losing and ties
-let win=0
-let loss=0
-let tie=0
-if (result="You win"){
-    win ++;
-} else if (result="You lose"){
-    loss ++;
-} else if (result="It is a tie"){   
-}   tie ++;    
+
+//Create a loop that adds values to win, loss, & tie to keep score
 //Create a function called game that makes playRound occur
 function game(){
     getComputerChoice();
@@ -62,5 +66,5 @@ function game(){
 
 game();
 console.log(result);
-alert(result);
+console.log (win,loss,tie);
 }
