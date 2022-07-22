@@ -1,8 +1,6 @@
 
 //Create a loop that increases that increase the value of i every time that result displays via alert
-
-
-
+for (let i = 0; i < 5; i++) {
 //Create a variable called computerChoice and set it equal to random of the three variables below
 let computerChoice = Math.floor(Math.random()*3+1);
 console.log (computerChoice);
@@ -16,8 +14,6 @@ function getComputerChoice(){
         computerChoice= "scissors"
 }
 }
-getComputerChoice();
-console.log(computerChoice);
 //Create a variable called playerChoice and ask the user for a value
 let playerInput= window.prompt("Choose Rock, Paper, or Scissors.")
 //Create a variable that takes the data from the user and turn into all lower case string
@@ -48,16 +44,23 @@ if (computerChoice==="rock" && playerChoice==="rock"){
     result="Please choose between Rock, Paper, and Scissors"
 }
 }
+//Create variables for winning losing and ties
+let win=0
+let loss=0
+let tie=0
+if (result="You win"){
+    win ++;
+} else if (result="You lose"){
+    loss ++;
+} else if (result="It is a tie"){   
+}   tie ++;    
 //Create a function called game that makes playRound occur
 function game(){
-    playRound();
-}
-for (i=0; i<=5;) {
-    if (alert(result)){
-        i++;
-        ame();
+    getComputerChoice();
+    playRound(); 
+    }
+
+game();
 console.log(result);
 alert(result);
-    }
 }
-
