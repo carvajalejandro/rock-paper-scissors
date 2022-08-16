@@ -1,3 +1,4 @@
+/*
 //Create variables for winning losing and ties
 let win=0
 let loss=0
@@ -68,3 +69,22 @@ game();
 console.log(result);
 console.log (win,loss,tie);
 }
+*/
+
+//Testing Buttons
+
+let container = document.querySelector('#container');
+let btnRock = document.createElement("button");
+btnRock.classList.add('rock');
+btnRock.textContent='Rock';
+container.appendChild(btnRock);
+
+let btnPaper = document.createElement("button");
+btnPaper.classList.add('paper');
+btnPaper.textContent='Paper';
+container.appendChild(btnPaper);
+
+let btnSci = document.createElement("button");
+btnSci.classList.add('rock');
+btnSci.textContent='Rock';
+container.appendChild(btnSci);
