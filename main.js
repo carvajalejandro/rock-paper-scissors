@@ -1,6 +1,13 @@
+const choiceBtns = document.querySelectorAll(".choiceBtn");
+let playerChoice;
+choiceBtns.forEach((button) => button.addEventListener('click', () => {
+    
+    playerChoice= button.textContent.toLowerCase;
+    computerPlay();
+  }));
+
 let playerScore = 0;
 let compScore = 0;
-
 
 const computerPlay=() => {
 const arrOfChoices = ['rock','paper', 'scissors']
@@ -8,6 +15,11 @@ const randomNum= Math.floor(Math.random()*3)
 const compChoice= arrOfChoices[randomNum];
 return compChoice;
 }
+const playerPlay=() => {
+    const arrOfChoices = ['rock','paper', 'scissors']
+    const playerChoice= arrOfChoices;
+    return playerChoice;
+    }
 
 const playRound = (playerSelection, computerSelection) =>{
     if (playerSelection==='rock' && computerSelection==='rock'){
@@ -37,13 +49,11 @@ const playRound = (playerSelection, computerSelection) =>{
         
     }   
 };
-
-
 const game= ()=>{
     for(let i=0; i < 5; i++ ){
         const computerSelection = computerPlay();
-        const playerSelection = prompt ('Choose your weapon!', 'Rock, Paper, or Scissors.').toLocaleLowerCase();
-        playRound(playerSelection,computerSelection);
+        //const playerSelection = prompt (
+        console.log(playRound(playerSelection,computerSelection));
     }
     if (playerScore>compScore){
         return 'You beat the computer'
