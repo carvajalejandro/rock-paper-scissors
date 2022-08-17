@@ -2,8 +2,10 @@ const gameDiv= document.querySelector("#gameDiv");
 const playerText = document.querySelector("#playerText")
 const computerText = document.querySelector("#computerText")
 const resultText = document.querySelector("#resultText")
+const playerWins = document.querySelector("#playerWins")
+const computerWins = document.querySelector("#computerWins")
+const ties = document.querySelector("#ties")
 const choiceBtns = document.querySelectorAll(".choiceBtn");
-const playerWins = document.createElement('div');
 
 
 
