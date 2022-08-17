@@ -1,7 +1,7 @@
 const choiceBtns = document.querySelectorAll(".choiceBtn");
 let playerChoice;
 choiceBtns.forEach((button) => button.addEventListener('click', () => {
-    
+    //i now think this will be the way
     playerChoice= button.textContent.toLowerCase;
     computerPlay();
   }));
@@ -9,18 +9,14 @@ choiceBtns.forEach((button) => button.addEventListener('click', () => {
 let playerScore = 0;
 let compScore = 0;
 
+//this gets the computer choice
 const computerPlay=() => {
 const arrOfChoices = ['rock','paper', 'scissors']
 const randomNum= Math.floor(Math.random()*3)
 const compChoice= arrOfChoices[randomNum];
 return compChoice;
 }
-const playerPlay=() => {
-    const arrOfChoices = ['rock','paper', 'scissors']
-    const playerChoice= arrOfChoices;
-    return playerChoice;
-    }
-
+//this function compares player vs computer
 const playRound = (playerSelection, computerSelection) =>{
     if (playerSelection==='rock' && computerSelection==='rock'){
         return 'You tied! You both chose rock'
@@ -49,6 +45,7 @@ const playRound = (playerSelection, computerSelection) =>{
         
     }   
 };
+//this grabs
 const game= ()=>{
     for(let i=0; i < 5; i++ ){
         const computerSelection = computerPlay();
