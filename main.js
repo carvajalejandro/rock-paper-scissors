@@ -1,10 +1,11 @@
 const gameDiv= document.querySelector("#gameDiv");
-const playerText = document.querySelector("#playerText")
-const computerText = document.querySelector("#computerText")
-const resultText = document.querySelector("#resultText")
-const playerWins = document.querySelector("#playerWins")
-const computerWins = document.querySelector("#computerWins")
-const ties = document.querySelector("#ties")
+const results=document.querySelector("#results");
+const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+const resultText = document.querySelector("#resultText");
+const playerWins = document.querySelector("#playerWins");
+const computerWins = document.querySelector("#computerWins");
+const ties = document.querySelector("#ties");
 const choiceBtns = document.querySelectorAll(".choiceBtn");
 
 
@@ -24,7 +25,10 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = playRound();
-    console.log(playerScore,computerScore,tieScore)
+    playerWins.textContent=`Player Wins:${playerScore}`;
+    computerWins.textContent=`Computer Wins:${computerScore}`;
+    ties.textContent=`Ties:${tieScore} `;
+    
 
   }));
 
