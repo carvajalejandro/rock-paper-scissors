@@ -38,10 +38,11 @@ const playRound = (playerSelection, computerSelection) =>{
     }   
 };
 
-const playerSelection = 'rock';
+
 const game= ()=>{
     for(let i=0; i < 5; i++ ){
         const computerSelection = computerPlay();
+        const playerSelection = prompt ('Choose your weapon!', 'Rock, Paper, or Scissors.').toLocaleLowerCase();
         playRound(playerSelection,computerSelection);
     }
     if (playerScore>compScore){
