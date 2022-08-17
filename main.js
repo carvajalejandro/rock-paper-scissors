@@ -22,6 +22,7 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = playRound();
+    console.log(playerScore,computerScore,tieScore)
 
   }));
 
@@ -42,19 +43,33 @@ switch(randomNum){
 }
 //This compares the choice of player and computer
 function playRound(){
-    if (player==computer){
-        tieScore++;
-        return 'Draw!'
-    } else if(computer== 'Rock'){
-        return (player=='Paper') ?'You Win!' :'You Lose!'
+    if (computer===player){
+        tieScore ++;
+       return "It is a tie"; 
+    } else if (computer==="Rock" && player==="Paper"){
+        playerScore++;
+       return "You win";
+    } else if (computer==="Rock" && player==="Scissors"){
+        computerScore++;
+        return "You lose";
+    } else if (computer==="Paper" && player==="Scissors"){
+        playerScore++;
+        return "You win";
+    } else if (computer==="Paper" && player==="Rock"){
+        computerScore++;
+        return "You lose";
+    } else if (computer==="Scissors" && player==="Rock"){
+        playerScore++;
+        return"You win";
+    } else if (computer==="Scissors" && player==="Paper"){
+        computerScore++;
+        return"You lose";
+    } else {
+        return "Please choose between Rock, Paper, and Scissors"
+       
     }
-    else if(computer== 'Paper'){
-        return (player=='Scissors') ?'You Win!' :'You Lose!'
     }
-    else if(computer== 'Scissors'){
-        return (player=='Rock') ?'You Win!' :'You Lose!'
-    } 
-}
+    
 
 // const game= ()=>{
 //     for(let i=0; i < 5; i++ ){
