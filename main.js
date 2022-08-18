@@ -1,5 +1,8 @@
+const body= document.querySelector(".body");
+body.setAttribute('style', 'display:flex; justify-content:center; text-align: center;')
 const gameDiv= document.querySelector("#gameDiv");
 const results=document.querySelector("#results");
+results.setAttribute('style', 'display:flex; justify-content:center; margin:50px;')
 const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
@@ -20,6 +23,11 @@ let result;
 
 //This causes a round to occur
 choiceBtns.forEach(button => button.addEventListener("click", () => {
+    if(playerScore===3 ){
+        console.log('Game over!')
+        return;
+    }
+
     player= button.textContent;
     computerTurn();
     playerText.textContent = `Player: ${player}`;
