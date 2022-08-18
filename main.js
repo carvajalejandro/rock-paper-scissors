@@ -23,21 +23,23 @@ let result;
 
 //This causes a round to occur
 choiceBtns.forEach(button => button.addEventListener("click", () => {
-    if(playerScore===3 ){
-        console.log('Game over!')
-        return;
+    if(playerScore===3|| computerScore===3 || tieScore===3 ){
+        const gameOver = document.createElement('h1');
+        gameOver.classList.add('gameOver');
+        gameOver.textContent = 'Game Over!';
+        gameDiv.appendChild(gameOver);
+        return 
+       
     }
 
     player= button.textContent;
     computerTurn();
-    playerText.textContent = `Player: ${player}`;
-    computerText.textContent = `Computer: ${computer}`;
+    playerText.textContent = `Player: ${player}  `;
+    computerText.textContent = `Computer: ${computer}  `;
     resultText.textContent = playRound();
-    playerWins.textContent=`Player Wins:${playerScore}`;
-    computerWins.textContent=`Computer Wins:${computerScore}`;
+    playerWins.textContent=`Player Wins:  ${playerScore}  `;
+    computerWins.textContent=`Computer Wins:  ${computerScore}  `;
     ties.textContent=`Ties:${tieScore} `;
-    
-
   }));
 
 //this gets the computer choice
