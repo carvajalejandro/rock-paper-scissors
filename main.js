@@ -2,7 +2,7 @@ const body= document.querySelector(".body");
 body.setAttribute('style', 'display:flex; justify-content:center; text-align: center;')
 const gameDiv= document.querySelector("#gameDiv");
 const results=document.querySelector("#results");
-results.setAttribute('style', 'display:flex; justify-content:center; margin:50px;')
+results.setAttribute('style', 'display:flex; justify-content:center;')
 const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
@@ -10,6 +10,7 @@ const playerWins = document.querySelector("#playerWins");
 const computerWins = document.querySelector("#computerWins");
 const ties = document.querySelector("#ties");
 const choiceBtns = document.querySelectorAll(".choiceBtn");
+
 
 
 
@@ -23,8 +24,10 @@ let result;
 
 //This causes a round to occur
 choiceBtns.forEach(button => button.addEventListener("click", () => {
+if(playerScore===3|| computerScore===3){
+    
 
-
+}
     player= button.textContent;
     computerTurn();
     playerText.textContent = `Player: ${player}  `;
@@ -33,11 +36,17 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
     playerWins.textContent=`Player Wins:  ${playerScore}  `;
     computerWins.textContent=`Computer Wins:  ${computerScore}  `;
     ties.textContent=`Ties:${tieScore} `;
-    if(playerScore===3|| computerScore===3){
+
+    if(playerScore===3||computerScore===3){
         const gameOver = document.createElement('h1');
         gameOver.classList.add('gameOver');
         gameOver.textContent = 'Game Over!';
         gameDiv.appendChild(gameOver);
+        const refresh =document.createElement("button");
+        refresh.classList.add('refresh')
+        refresh.textContent= 'Refresh Page';
+        gameDiv.appendChild(refresh);
+        refresh.addEventListener("click", window.location.reload())
         return;
        
     }
