@@ -10,6 +10,7 @@ const playerWins = document.querySelector("#playerWins");
 const computerWins = document.querySelector("#computerWins");
 const ties = document.querySelector("#ties");
 const choiceBtns = document.querySelectorAll(".choiceBtn");
+const gameOverContainer=document.querySelector("#gameOverContainer");
 
 
 
@@ -41,13 +42,8 @@ if(playerScore===3|| computerScore===3){
         const gameOver = document.createElement('h1');
         gameOver.classList.add('gameOver');
         gameOver.textContent = 'Game Over!';
-        gameDiv.appendChild(gameOver);
-        const refresh =document.createElement("button");
-        refresh.classList.add('refresh')
-        refresh.textContent= 'Refresh Page';
-        gameDiv.appendChild(refresh);
-        refresh.addEventListener("click", window.location.reload())
-        return;
+        gameOverContainer.appendChild(gameOver);
+        return 'Game Over';
        
     }
   }));
