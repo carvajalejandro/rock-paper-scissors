@@ -28,9 +28,8 @@ let result;
 //This causes a round to occur
 choiceBtns.forEach(button => button.addEventListener("click", () => {
 if(playerScore===3|| computerScore===3){
-    
-
-}
+    return;
+} else{
     player= button.textContent;
     computerTurn();
     playerText.textContent = `Player: ${player}  `;
@@ -48,6 +47,7 @@ if(playerScore===3|| computerScore===3){
         return 'Game Over';
        
     }
+}
   }));
 
 //this gets the computer choice
