@@ -1,3 +1,4 @@
+//Elements
 const body= document.querySelector(".body");
 body.setAttribute('style', 'display:flex; justify-content:center; text-align: center;')
 const gameDiv= document.querySelector("#gameDiv");
@@ -15,8 +16,6 @@ playerWins.style.cssText= 'margin-left:10px; margin-right:10px;'
 computerWins.style.cssText= 'margin-left:10px; margin-right:10px;'
 ties.style.cssText= 'margin-left:10px; margin-right:10px;'
 
-
-
 //Variables
 let player;
 let playerScore =0;
@@ -25,10 +24,12 @@ let computer;
 let tieScore=0;;
 let result;
 
-//This causes a round to occur
+//EventListener to start the game
 choiceBtns.forEach(button => button.addEventListener("click", () => {
+//this checks if either player or computer score is already at 3
 if(playerScore===3|| computerScore===3){
     return;
+//This displays the results of the round
 } else{
     player= button.textContent;
     computerTurn();
@@ -38,14 +39,13 @@ if(playerScore===3|| computerScore===3){
     playerWins.textContent=`Player Wins:  ${playerScore}  `;
     computerWins.textContent=`Computer Wins:  ${computerScore}  `;
     ties.textContent=`Ties:${tieScore} `;
-
+//This shows game over once either player or computer score is equal to 3
     if(playerScore===3||computerScore===3){
         const gameOver = document.createElement('h1');
         gameOver.classList.add('gameOver');
         gameOver.textContent = 'Game Over!';
         gameOverContainer.appendChild(gameOver);
         return 'Game Over';
-       
     }
 }
   }));
@@ -94,20 +94,4 @@ function playRound(){
     }
     }
     
-
-// const game= ()=>{
-//     for(let i=0; i < 5; i++ ){
-//         const computerSelection = computerTurn();
-//         const playerSelection = button.textContent;
-      
-
-//     if (playerScore>compScore){
-//         return 'You beat the computer'
-//     } else if (playerScore<compScore){
-//         return 'You lost to the computer'
-//     } else{
-//         return 'It is a tie!'
-//     }
-//     }
-// }   
 
