@@ -2,7 +2,7 @@ const body= document.querySelector(".body");
 body.setAttribute('style', 'display:flex; justify-content:center; text-align: center;')
 const gameDiv= document.querySelector("#gameDiv");
 const results=document.querySelector("#results");
-results.setAttribute('style', 'display:flex; justify-content:center;')
+results.setAttribute('style', 'display:flex; justify-content: space-evenly;')
 const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
@@ -11,7 +11,9 @@ const computerWins = document.querySelector("#computerWins");
 const ties = document.querySelector("#ties");
 const choiceBtns = document.querySelectorAll(".choiceBtn");
 const gameOverContainer=document.querySelector("#gameOverContainer");
-
+playerWins.style.cssText= 'margin-left:10px; margin-right:10px;'
+computerWins.style.cssText= 'margin-left:10px; margin-right:10px;'
+ties.style.cssText= 'margin-left:10px; margin-right:10px;'
 
 
 
