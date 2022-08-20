@@ -26,8 +26,8 @@ let result;
 
 //EventListener to start the game
 choiceBtns.forEach(button => button.addEventListener("click", () => {
-//this checks if either player or computer score is already at 3
-if(playerScore===3|| computerScore===3){
+//this checks if either player or computer score is already at 5
+if(playerScore===5|| computerScore===5){
     return;
 //This displays the results of the round
 } else{
@@ -40,7 +40,7 @@ if(playerScore===3|| computerScore===3){
     computerWins.textContent=`Computer Wins:  ${computerScore}  `;
     ties.textContent=`Ties:${tieScore} `;
 //This shows game over once either player or computer score is equal to 3
-    if(playerScore===3||computerScore===3){
+    if(playerScore===5||computerScore===5){
         const gameOver = document.createElement('h1');
         gameOver.classList.add('gameOver');
         gameOver.textContent = 'Game Over!';
